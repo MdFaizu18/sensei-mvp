@@ -1,12 +1,14 @@
-import { HeroSection } from "@/components/landing/HeroSection"
-import PersonaCardsSection from "@/components/landing/PersonaCardsSection"
+import { HeroSection } from "@/components/Landing/HeroSection"
+import { Navbar } from "@/components/Landing/Navbar"
+import PersonaCardsSection from "@/components/Landing/PersonaCardsSection"
+
 
 const LandingPage = () => {
   return (
     <div>
       {/* for navbar */}
       <div>
-
+      <Navbar/>
       </div>
       {/* for home layer  */}\
       <div>
