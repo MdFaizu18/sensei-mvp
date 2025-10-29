@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/landing/HeroSection"
+import PersonaCardsSection from "@/components/landing/PersonaCardsSection"
 
 const LandingPage = () => {
   return (
@@ -13,7 +14,7 @@ const LandingPage = () => {
       </div>
       {/* for other sections  */}
       <div>
-        
+        <PersonaCardsSection/>
       </div>
       {/* for footer */}
       <div>
