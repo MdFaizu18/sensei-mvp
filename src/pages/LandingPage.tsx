@@ -1,4 +1,5 @@
 import { FeaturesSection } from "@/components/landing/FeaturesSection"
+import Footer from "@/components/Landing/Footer"
 import { HeroSection } from "@/components/Landing/HeroSection"
 import { Navbar } from "@/components/Landing/Navbar"
 import PersonaCardsSection from "@/components/Landing/PersonaCardsSection"
@@ -24,7 +25,7 @@ const LandingPage = () => {
       </div>
       {/* for footer */}
       <div>
-        
+        <Footer/>
       </div>
 
     </div>
