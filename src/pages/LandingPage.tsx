@@ -1,3 +1,4 @@
+import { FeaturesSection } from "@/components/landing/FeaturesSection"
 import { HeroSection } from "@/components/Landing/HeroSection"
 import { Navbar } from "@/components/Landing/Navbar"
 import PersonaCardsSection from "@/components/Landing/PersonaCardsSection"
@@ -17,6 +18,9 @@ const LandingPage = () => {
       {/* for other sections  */}
       <div>
         <PersonaCardsSection/>
+      </div>
+      <div>
+        <FeaturesSection/>
       </div>
       {/* for footer */}
       <div>
