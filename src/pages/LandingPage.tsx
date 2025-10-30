@@ -24,7 +24,7 @@ const LandingPage = () => {
       </div>
       {/* for footer */}
       <div>
-
+        
       </div>
 
     </div>
