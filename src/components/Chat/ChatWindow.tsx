@@ -7,6 +7,8 @@ import { Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import UserMessage from "./UserMessage"
 import ChatbotMessage from "./ChatbotMessage"
+import ChatInput from "./ChatInput"
+import PersonaGrid from "./PersonaGrid"
 
 
 interface Message {
@@ -54,16 +56,7 @@ export default function ChatWindow({ chatId, messages, onSendMessage, isLoading 
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto px-6 py-4">
-        {messages.length === 0 ? (
-          <div className="flex h-full items-center justify-center">
-            <div className="text-center">
-              <div className="mb-4 h-16 w-16 rounded-full bg-gray-100 mx-auto flex items-center justify-center">
-                <span className="text-2xl">💬</span>
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-gray-900">No messages yet</h3>
-              <p className="text-sm text-gray-500">Start typing to begin your conversation</p>
-            </div>
-          </div>
+        {messages.length === 0 ? (<div className="scale-80 max-w-4xl w-full"><PersonaGrid/></div>
         ) : (
           <div className="space-y-4">
             {messages.map((message) => (
@@ -82,7 +75,7 @@ export default function ChatWindow({ chatId, messages, onSendMessage, isLoading 
       </div>
       
         <div className="p-4">
-      <UserMessage
+      {/* <UserMessage
         content="User bubble check"
         timestamp={new Date()}
         isRead={true}
@@ -95,27 +88,10 @@ export default function ChatWindow({ chatId, messages, onSendMessage, isLoading 
         isLoading={false}
         personaName="Alex"
       />
+    </div> */}
     </div>
-    </div>
-      {/* Input Area */}
-      <div className="border-t border-gray-200 px-6 py-4">
-        <div className="flex gap-2">
-          <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Type your message here..."
-            className="flex-1 resize-none rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
-            rows={3}
-          />
-          <Button
-            onClick={handleSend}
-            disabled={!input.trim() || isLoading}
-            className="bg-black text-white hover:bg-gray-900 disabled:opacity-50"
-          >
-            <Send className="h-4 w-4" />
-          </Button>
-        </div>
+      <div>
+        <ChatInput/>
       </div>
     </div>
   )
