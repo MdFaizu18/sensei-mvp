@@ -3,7 +3,6 @@ import React from 'react'
 export const ChatPage = () => {
   return (
     <div>
-    <div>
       {/* for navbar */}
       <div>
       <Navbar/>
@@ -19,8 +18,5 @@ export const ChatPage = () => {
       <div>
         
       </div>
-      
-
-    </div>
   )
 }

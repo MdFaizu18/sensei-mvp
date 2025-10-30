@@ -7,6 +7,7 @@ import PersonaCardsSection from "@/components/Landing/PersonaCardsSection"
 
 const LandingPage = () => {
   return (
+    
     <div>
       {/* for navbar */}
       <div>
